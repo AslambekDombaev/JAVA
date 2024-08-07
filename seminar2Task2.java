@@ -10,6 +10,11 @@ public class seminar2Task2 {
         String a = scanner.nextLine();
         scanner.close();
         
+        StringBuilder b = getB(a);
+        System.out.print(b.toString());
+    }
+
+    private static StringBuilder getB(String a) {
         StringBuilder b = new StringBuilder();
         b.append(a.charAt(0));
 
@@ -18,6 +23,6 @@ public class seminar2Task2 {
                 b.append(a.charAt(i+1));
             }
         }
-        System.out.print(b.toString());
+        return b;
     }
 }
