@@ -20,24 +20,41 @@ public class seminar2Task1 {
 //         System.out.println(str);
 //     }
 // }
+
+
+
+
+
+//         Scanner iScanner = new Scanner(System.in);
+//         System.out.printf("int n: ");
+//         int n = iScanner.nextInt();
+//         String c1 = "c1";
+//         String c2 = "c2";
+//         String res = "";
+//         res = getStrofChars(n, c1, c2);
+//         System.out.println("res = " + res);
+//         iScanner.close(); 
+//     }
+//     private static String getStrofChars(int n, String c1, String c2) throws Exception {
+//         if (n < 0 || n%2 == 1) {
+//             throw new Exception("Не валидное значение N");
+//         }
+//         StringBuilder sb = new StringBuilder();
+//         for (int i = 0; i < n/2; i++) {
+//                 sb.append(c1).append(c2);
+//             }
+//         return sb.toString();
+//     }
+// }
+
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("int n: ");
         int n = iScanner.nextInt();
         String c1 = "c1";
         String c2 = "c2";
-        String res = "";
-        res = getStrofChars(n, c1, c2);
-        System.out.println("res = " + res);
-        iScanner.close(); 
-    }
-    private static String getStrofChars(int n, String c1, String c2) throws Exception {
-        if (n < 0 || n%2 == 1) {
-            throw new Exception("Не валидное значение N");
-        }
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < n/2; i++) {
-                sb.append(c1).append(c2);
-            }
-        return sb.toString();
+
+        String res = (c1 + c2).repeat(n/2);
+        System.out.println(res);
+
     }
 }
