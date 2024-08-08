@@ -6,22 +6,31 @@ import java.util.Scanner;
 
 public class seminar2Task3 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        scanner.close();
-        boolean flag = getFlag(str);
-        System.out.println(flag);
-    }
+//         Scanner scanner = new Scanner(System.in);
+//         String str = scanner.nextLine();
+//         scanner.close();
+//         boolean flag = getFlag(str);
+//         System.out.println(flag);
+//     }
 
-    private static boolean getFlag(String str) {
-        boolean flag = true;
+//     private static boolean getFlag(String str) {
+//         boolean flag = true;
 
-        for (int i = 0; i < str.length()/2; i++) {
-            if (str.charAt(i) != str.charAt(str.length()-i-1)) {
-                flag = false;
-                break;
-            }   
+//         for (int i = 0; i < str.length()/2; i++) {
+//             if (str.charAt(i) != str.charAt(str.length()-i-1)) {
+//                 flag = false;
+//                 break;
+//             }   
+//         }
+//         return flag;
+//     }
+// }
+
+        String stroka = "qwe eWQ".replaceAll("\\s", "").toLowerCase();
+        if(stroka.equals(new StringBuilder(stroka).reverse().toString())) {
+            System.out.println("палиндром");
+        } else {
+            System.out.println("не палиндром");
         }
-        return flag;
-    }
-}
+    }   
+}    
